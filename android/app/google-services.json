@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "288684786570",
+    "project_id": "booking-app-sweden",
+    "storage_bucket": "booking-app-sweden.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:288684786570:android:0d937ae028c4e8ba8d7e73",
+        "android_client_info": {
+          "package_name": "com.example.booking_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD2y4kiQHEwAXy-Hogwwqzx-9XhvIpQ434"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
