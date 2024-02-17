@@ -17,10 +17,7 @@ import 'package:flutter/foundation.dart'
 class DefaultFirebaseOptions {
   static FirebaseOptions get currentPlatform {
     if (kIsWeb) {
-      throw UnsupportedError(
-        'DefaultFirebaseOptions have not been configured for web - '
-        'you can reconfigure this by running the FlutterFire CLI again.',
-      );
+      return web;
     }
     switch (defaultTargetPlatform) {
       case TargetPlatform.android:
@@ -28,10 +25,7 @@ class DefaultFirebaseOptions {
       case TargetPlatform.iOS:
         return ios;
       case TargetPlatform.macOS:
-        throw UnsupportedError(
-          'DefaultFirebaseOptions have not been configured for macos - '
-          'you can reconfigure this by running the FlutterFire CLI again.',
-        );
+        return macos;
       case TargetPlatform.windows:
         throw UnsupportedError(
           'DefaultFirebaseOptions have not been configured for windows - '
@@ -49,6 +43,15 @@ class DefaultFirebaseOptions {
     }
   }
 
+  static const FirebaseOptions web = FirebaseOptions(
+    apiKey: 'AIzaSyBnzkCXHxg930qZrC6A4_DOKXg1trJ0_NE',
+    appId: '1:288684786570:web:f607ce0c1971a5208d7e73',
+    messagingSenderId: '288684786570',
+    projectId: 'booking-app-sweden',
+    authDomain: 'booking-app-sweden.firebaseapp.com',
+    storageBucket: 'booking-app-sweden.appspot.com',
+  );
+
   static const FirebaseOptions android = FirebaseOptions(
     apiKey: 'AIzaSyD2y4kiQHEwAXy-Hogwwqzx-9XhvIpQ434',
     appId: '1:288684786570:android:0d937ae028c4e8ba8d7e73',
@@ -64,5 +67,14 @@ class DefaultFirebaseOptions {
     projectId: 'booking-app-sweden',
     storageBucket: 'booking-app-sweden.appspot.com',
     iosBundleId: 'com.example.bookingApp',
+  );
+
+  static const FirebaseOptions macos = FirebaseOptions(
+    apiKey: 'AIzaSyAZS6a25nzoDLuLOiy44tb80VSfzn05tE8',
+    appId: '1:288684786570:ios:ac4165ef434090b18d7e73',
+    messagingSenderId: '288684786570',
+    projectId: 'booking-app-sweden',
+    storageBucket: 'booking-app-sweden.appspot.com',
+    iosBundleId: 'com.example.bookingApp.RunnerTests',
   );
 }
