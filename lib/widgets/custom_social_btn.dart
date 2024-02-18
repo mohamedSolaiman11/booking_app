@@ -1,5 +1,6 @@
 import 'package:booking_app/utils/constant/colors.dart';
 import 'package:booking_app/widgets/medium_text.dart';
+import 'package:booking_app/widgets/smaill_text.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -27,7 +28,7 @@ class CustomSocialButton extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
               SvgPicture.asset(image,width: 35,),
-               Center(child: MediumText(text: text,color: AppColor.textPrimaryColor,)),
+               Center(child: SmallText(text: text,color: AppColor.textPrimaryColor,)),
             ],
           )
         ),

@@ -3,7 +3,8 @@ import 'package:booking_app/widgets/medium_text.dart';
 import 'package:flutter/material.dart';
 
 class CustomButton extends StatelessWidget {
-  const CustomButton({super.key});
+  final String text;
+  const CustomButton({super.key, required this.text});
 
   @override
   Widget build(BuildContext context) {
@@ -13,13 +14,13 @@ class CustomButton extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Container(
-          width: width*.55,
-          height: height*.07,
+          width:text=="Registrera mig!"?width*.7: width*.55,
+          height: height*.075,
           decoration: BoxDecoration(
             color: AppColor.btnColor,
             borderRadius: BorderRadius.circular(50),
           ),
-          child: const Center(child: MediumText(text: "Logga in",color: AppColor.textSecondaryColor,)),
+          child:  Center(child: MediumText(text: text,color: AppColor.textSecondaryColor,)),
         ),
       ],
     );

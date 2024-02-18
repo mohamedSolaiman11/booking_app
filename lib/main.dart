@@ -1,5 +1,6 @@
 import 'package:booking_app/pages/login.dart';
 import 'package:booking_app/pages/sign_up.dart';
+import 'package:booking_app/pages/verifing_phone_email_page.dart';
 import 'package:device_preview/device_preview.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/services.dart';
@@ -41,12 +42,13 @@ class BookingApp extends StatelessWidget {
             error: Colors.deepPurple,
             onError: Colors.purpleAccent,
             background: Colors.white,
-            onBackground: Colors.yellow,
+            onBackground: Colors.black,
             surface: Colors.white,
             onSurface: Colors.black,
-          )),
+          ),
+      ),
       debugShowCheckedModeBanner: false,
-      home: const SignUp(),
+      home: const VerifyingPhoneAndAddress(),
     );
   }
 }
