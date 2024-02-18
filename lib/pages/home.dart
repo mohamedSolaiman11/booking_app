@@ -10,7 +10,7 @@ class HomePage extends StatelessWidget {
       body: Container(
         width: double.infinity,
         height: double.infinity,
-        child: Center(child: Text("بسم الله الرحمن الرحيم",style: TextStyle(fontSize: 40),),),
+        child: Center(child: Text("",style: TextStyle(fontSize: 40),),),
       ),
     );
   }
