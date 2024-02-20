@@ -81,7 +81,12 @@ class _VerifyingPhoneAndAddressState extends State<VerifyingPhoneAndAddress> {
                 label: "E-postverifieringskod ",
               ),
               SizedBox(height: 20,),
-              CustomButton(text: "Verifiera")
+              CustomButton(text: "Verifiera"),
+              SizedBox(height: 40,),
+              MediumText(text:"Fick du inte koden?" , color: AppColor.btnColor),
+              SizedBox(height: 10,),
+              MediumText(text:"Återsänd koden" , color: AppColor.btnColor),
+
             ],
           ),
         ),
@@ -89,3 +94,6 @@ class _VerifyingPhoneAndAddressState extends State<VerifyingPhoneAndAddress> {
     );
   }
 }
+
+//Fick du inte koden?
+//Återsänd koden

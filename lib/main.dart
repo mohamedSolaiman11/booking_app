@@ -1,9 +1,9 @@
 import 'package:booking_app/pages/login.dart';
 import 'package:booking_app/pages/sign_up.dart';
+import 'package:booking_app/pages/verifiying_ohone_email.dart';
 import 'package:device_preview/device_preview.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/services.dart';
-
 import 'firebase_options.dart';
 import 'package:booking_app/pages/home.dart';
 import 'package:flutter/material.dart';
@@ -46,7 +46,7 @@ class BookingApp extends StatelessWidget {
             onSurface: Colors.black,
           )),
       debugShowCheckedModeBanner: false,
-      home: const SignUp(),
+      home: const VerifyingPhoneAndAddress(),
     );
   }
 }
