@@ -10,6 +10,6 @@ class MediumText extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Center(child: Text(text,style:  TextStyle(fontSize: FontSize.medium,fontWeight: FontWeight.normal,color: color),));
+    return Center(child: Text(text,style:  TextStyle(fontSize: FontSize.titleMedium,fontWeight: FontWeight.normal,color: color),));
   }
 }

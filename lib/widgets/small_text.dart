@@ -10,6 +10,6 @@ class SmallText extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Center(child: Text(text,style:  TextStyle(fontSize: FontSize.small,fontWeight: FontWeight.normal,color: color),));
+    return Center(child: Text(text,style:  TextStyle(fontSize: FontSize.bodyLarge,fontWeight: FontWeight.normal,color: color),));
   }
 }

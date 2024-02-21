@@ -4,8 +4,9 @@ import 'package:booking_app/widgets/custom_text_field.dart';
 import 'package:booking_app/widgets/medium_text.dart';
 import 'package:flutter/material.dart';
 
-import '../utils/constant/app_color.dart';
-
+import '../../utils/constant/app_color.dart';
+import '../../utils/constant/app_style.dart';
+import '../../widgets/custom_btn_full_width.dart';
 
 class VerifyingPhoneAndAddress extends StatefulWidget {
   const VerifyingPhoneAndAddress({super.key});
@@ -26,12 +27,9 @@ class _VerifyingPhoneAndAddressState extends State<VerifyingPhoneAndAddress> {
       appBar: AppBar(
         foregroundColor: Colors.black,
         leadingWidth: width * .3,
-        title: const Text(
+        title:  Text(
           "Verifiera uppgifter",
-          style: TextStyle(
-              color: AppColor.textPrimaryColor,
-              fontSize: 24,
-              fontWeight: FontWeight.bold),
+          style: AppStyles.styleSemiBold24(context)
         ),
         centerTitle: true,
       ),
@@ -46,47 +44,63 @@ class _VerifyingPhoneAndAddressState extends State<VerifyingPhoneAndAddress> {
                 width: width,
                 height: height * .15,
                 // Provide a width for the container
-                child: Align(
+                child:  Align(
                   alignment: Alignment.center,
                   child: Text(
                     ConstText.verifyText,
-                    style: TextStyle(
-                        fontSize: 16,
-                        color: AppColor.backgroundOfNavigationBarColor),
+                    style: AppStyles.styleRegular18(context),
                     maxLines: 4,
-
                   ),
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 5,
               ),
               CustomTextFormField(
                 controller: smsController,
                 textInputType: TextInputType.number,
-                validator: (input) {} ,
+                validator: (input) {},
                 hintText: "Ange verifikationskoden från SMS:et",
                 icon: Icons.ice_skating,
                 check: false,
                 label: "Telefonverifieringskod ",
+                borderRadius: 15,
               ),
-              SizedBox(height: 15,),
+              const SizedBox(
+                height: 15,
+              ),
               CustomTextFormField(
                 controller: emailController,
                 textInputType: TextInputType.text,
-                validator: (input) {} ,
+                validator: (input) {},
                 hintText: "Ange verifikationskoden från mejlet",
                 icon: Icons.ice_skating,
                 check: true,
                 label: "E-postverifieringskod ",
+                borderRadius: 15,
               ),
-              SizedBox(height: 20,),
-              CustomButton(text: "Verifiera"),
-              SizedBox(height: 40,),
-              MediumText(text:"Fick du inte koden?" , color: AppColor.btnColor),
-              SizedBox(height: 10,),
-              MediumText(text:"Återsänd koden" , color: AppColor.btnColor),
-
+              const SizedBox(
+                height: 15,
+              ),
+              const CustomButtonFullWidth(text: "Verifiera"),
+              const SizedBox(
+                height: 40,
+              ),
+              Row(
+                children: [
+                  Text("Fick du inte koden?",style: AppStyles.styleMedium14(context),)
+                ],
+              ),
+              const SizedBox(
+                height: 10,
+              ),
+             Row(
+               children: [
+                 Text("Återsänd koden",style: AppStyles.styleSemiBold16(context),)
+                 // const MediumText(
+                 //     text: "Återsänd koden", color: AppColor.btnColor),
+               ],
+             )
             ],
           ),
         ),
