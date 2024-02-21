@@ -10,6 +10,6 @@ class BigText extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Text(text,style: const TextStyle(fontSize: FontSize.title,fontWeight: FontWeight.bold),);
+    return Text(text,style: const TextStyle(fontSize: FontSize.displaySmall,fontWeight: FontWeight.bold),);
   }
 }

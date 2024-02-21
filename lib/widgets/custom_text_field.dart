@@ -5,6 +5,7 @@ import '../utils/constant/app_color.dart';
 
 class CustomTextFormField extends StatefulWidget {
   bool? check;
+  final double borderRadius;
   late String? label;
   final IconData icon;
   final String hintText;
@@ -19,7 +20,7 @@ class CustomTextFormField extends StatefulWidget {
     required this.textInputType,
     required this.validator,
     required this.hintText,
-    required this.icon, required this.check,
+    required this.icon, required this.check, required this.borderRadius,
   }) : super(key: key);
 
   @override
@@ -57,13 +58,13 @@ class _CustomTextFormFieldState extends State<CustomTextFormField> {
         const EdgeInsets.symmetric(horizontal: 28, vertical: 19),
         hintText: widget.hintText,
         focusedBorder: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(40),
+          borderRadius: BorderRadius.circular(widget.borderRadius),
           borderSide: const BorderSide(
             color: AppColor.backgroundOfCalender,
           ),
         ),
         enabledBorder: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(40),
+          borderRadius: BorderRadius.circular(widget.borderRadius),
           borderSide: const BorderSide(
             color: AppColor.btnColor,
           ),

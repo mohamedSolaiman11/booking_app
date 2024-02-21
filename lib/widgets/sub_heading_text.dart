@@ -10,6 +10,6 @@ class SubHeading extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Text(text,style: const TextStyle(fontSize: FontSize.subHeading,fontWeight: FontWeight.normal),);
+    return Text(text,style: const TextStyle(fontSize: FontSize.bodyLarge,fontWeight: FontWeight.normal),);
   }
 }

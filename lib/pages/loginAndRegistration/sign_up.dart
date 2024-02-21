@@ -1,8 +1,9 @@
 import 'package:booking_app/widgets/custom_button.dart';
 import 'package:booking_app/widgets/custom_text_field.dart';
 import 'package:flutter/material.dart';
-import '../utils/constant/app_color.dart';
-import '../widgets/small_text.dart';
+import '../../utils/constant/app_color.dart';
+import '../../widgets/custom_btn_full_width.dart';
+import '../../widgets/small_text.dart';
 
 class SignUp extends StatefulWidget {
   const SignUp({super.key});
@@ -50,7 +51,7 @@ class _SignUpState extends State<SignUp> {
                           hintText: "Fyll i ditt för- och efternamn",
                           icon: Icons.ice_skating,
                           check: true,
-                          label: "För- och efternamn",
+                          label: "För- och efternamn", borderRadius: 15,
                         ),
                         const SizedBox(height: 15,),
                         CustomTextFormField(controller: nameController,
@@ -60,7 +61,7 @@ class _SignUpState extends State<SignUp> {
                           hintText: "Fyll i din e-post",
                           icon: Icons.ice_skating,
                           check: true,
-                          label: "E-post",
+                          label: "E-post", borderRadius: 15,
                         ),
                         const SizedBox(height: 15,),
                         CustomTextFormField(controller: nameController,
@@ -70,7 +71,7 @@ class _SignUpState extends State<SignUp> {
                             hintText: "Fyll i ditt telefonnummer",
                             label: "Telefonnummer",
                             icon: Icons.ice_skating,
-                            check: true),
+                            check: true, borderRadius: 15,),
                         const SizedBox(height: 35,),
                         CustomTextFormField(controller: nameController,
                             textInputType: TextInputType.text,
@@ -80,7 +81,7 @@ class _SignUpState extends State<SignUp> {
                             label: "Lösenord",
 
                             icon: Icons.ice_skating,
-                            check: true),
+                            check: true, borderRadius: 15,),
                         const SizedBox(height: 20,),
                         CustomTextFormField(controller: nameController,
                             textInputType: TextInputType.text,
@@ -89,7 +90,7 @@ class _SignUpState extends State<SignUp> {
                             hintText: "Bekräfta ditt lösenord",
                             label: "Bekräfta lösenord",
                             icon: Icons.ice_skating,
-                            check: true),
+                            check: true, borderRadius: 15,),
                         const SizedBox(height: 15,),
                         Row(
                           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -113,7 +114,7 @@ class _SignUpState extends State<SignUp> {
 
                         ),
                         const SizedBox(height: 10,),
-                        const CustomButton(text: 'Registrera mig!',)
+                        const CustomButtonFullWidth(text: 'Registrera mig!',)
                       ],
                     ),
                   ),

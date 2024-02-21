@@ -10,6 +10,6 @@ class CaptionText extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Text(text,style: const TextStyle(fontSize: FontSize.caption,fontWeight: FontWeight.normal),);
+    return Text(text,style: const TextStyle(fontSize: FontSize.bodySmall,fontWeight: FontWeight.normal),);
   }
 }
