@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">BookingMe</string>
+    <string name="facebook_app_id">1053579309068228</string>
+    <string name="fb_login_protocol_scheme">457761fc08d66eaf811eceb1444f546c</string>
+</resources>

@@ -7,7 +7,7 @@ import '../utils/constant/app_color.dart';
 class CustomButton extends StatelessWidget {
   final String text;
   final double borderRadius;
-  const CustomButton({super.key, required this.text, required this.borderRadius});
+  final Future Function()? onTap;  const CustomButton({super.key, required this.text, required this.borderRadius, required this.onTap});
 
   @override
   Widget build(BuildContext context) {
@@ -16,14 +16,17 @@ class CustomButton extends StatelessWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        Container(
-          width:text=="Registrera mig!"?width*.7: width*.65,
-          height: height*.07,
-          decoration: BoxDecoration(
-            color: AppColor.btnColor,
-            borderRadius: BorderRadius.circular(borderRadius),
+        InkWell(
+          onTap: onTap,
+          child: Container(
+            width:text=="Registrera mig!"?width*.7: width*.65,
+            height: height*.07,
+            decoration: BoxDecoration(
+              color: AppColor.btnColor,
+              borderRadius: BorderRadius.circular(borderRadius),
+            ),
+            child:  Center(child: Text(text,style: AppStyles.styleMedium18(context),)),
           ),
-          child:  Center(child: Text(text,style: AppStyles.styleMedium18(context),)),
         ),
       ],
     );

@@ -40,6 +40,10 @@ dependencies:
   firebase_auth:
   flutter_svg:
   lottie:
+  gradients: ^0.1.1+2
+  google_sign_in: '^6.2.1'
+  flutter_facebook_auth: ^6.1.1
+  modal_progress_hud_nsn: ^0.5.0
   device_preview:
 dev_dependencies:
   flutter_test:
