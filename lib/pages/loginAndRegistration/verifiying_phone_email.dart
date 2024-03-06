@@ -61,10 +61,11 @@ class _VerifyingPhoneAndAddressState extends State<VerifyingPhoneAndAddress> {
                 textInputType: TextInputType.number,
                 validator: (input) {},
                 hintText: "Ange verifikationskoden från SMS:et",
-                icon: Icons.ice_skating,
+                // icon: Icons.ice_skating,
                 check: false,
                 label: "Telefonverifieringskod ",
                 borderRadius: 15,
+                onChanged: (input) {  },
               ),
               const SizedBox(
                 height: 15,
@@ -74,15 +75,19 @@ class _VerifyingPhoneAndAddressState extends State<VerifyingPhoneAndAddress> {
                 textInputType: TextInputType.text,
                 validator: (input) {},
                 hintText: "Ange verifikationskoden från mejlet",
-                icon: Icons.ice_skating,
+                // icon: Icons.ice_skating,
                 check: true,
                 label: "E-postverifieringskod ",
                 borderRadius: 15,
+                onChanged: (input) {  },
               ),
               const SizedBox(
                 height: 15,
               ),
-              const CustomButtonFullWidth(text: "Verifiera"),
+               CustomButtonFullWidth(text: "Verifiera",
+                onTap: ()async {
+                return const SizedBox();
+                },),
               const SizedBox(
                 height: 40,
               ),

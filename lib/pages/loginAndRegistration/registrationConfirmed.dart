@@ -44,9 +44,11 @@ class RegistrationConfirmed extends StatelessWidget {
                       height: height * .3,
                       child: Lottie.asset("assets/animation/celepration.json"),
                     ),
-                    const CustomButton(
+                     CustomButton(
                       text: "Återgå till inloggning",
-                      borderRadius: 10,
+                      borderRadius: 10, onTap: () async{
+
+                     },
                     )
                   ],
                 ),

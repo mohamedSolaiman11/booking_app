@@ -1,5 +1,8 @@
 import 'package:booking_app/pages/loginAndRegistration/login.dart';
 import 'package:booking_app/pages/loginAndRegistration/registrationConfirmed.dart';
+import 'package:booking_app/pages/loginAndRegistration/sign_up.dart';
+import 'package:booking_app/pages/loginAndRegistration/verifiying_phone_email.dart';
+import 'package:booking_app/widgets/theme.dart';
 import 'package:device_preview/device_preview.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/services.dart';
@@ -12,9 +15,12 @@ void main() async {
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
-  runApp(DevicePreview(
-    enabled: true,
-      builder:(_)=> const BookingApp()));
+  runApp(
+    DevicePreview(
+      enabled: true,
+      builder: (_) => const BookingApp(),
+    ),
+  );
 }
 
 class BookingApp extends StatelessWidget {
@@ -26,26 +32,11 @@ class BookingApp extends StatelessWidget {
       builder: DevicePreview.appBuilder,
       locale: DevicePreview.locale(context),
       theme: ThemeData(
-          appBarTheme: const AppBarTheme(
-              backgroundColor: Colors.white,
-              systemOverlayStyle: SystemUiOverlayStyle(
-                statusBarColor: Colors.white,
-              )),
-          colorScheme:const ColorScheme(
-            brightness: Brightness.light,
-            primary: Colors.red,
-            onPrimary: Colors.blue,
-            secondary: Colors.grey,
-            onSecondary: Colors.white70,
-            error: Colors.deepPurple,
-            onError: Colors.purpleAccent,
-            background: Colors.white,
-            onBackground: Colors.yellow,
-            surface: Colors.pink,
-            onSurface: Colors.black,
-          )),
+          appBarTheme: CustomTheme.appBarTheme,
+          colorScheme: CustomTheme.colorScheme
+      ),
       debugShowCheckedModeBanner: false,
-      home: const RegistrationConfirmed(),
+      home: const Login(),
     );
   }
 }

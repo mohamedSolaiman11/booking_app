@@ -6,9 +6,10 @@ import 'package:flutter_svg/flutter_svg.dart';
 import '../utils/constant/app_color.dart';
 
 class CustomSocialButton extends StatelessWidget {
+  final Function()? onTap;
   final String image;
   final String text;
-  const CustomSocialButton({super.key, required this.image, required this.text});
+  const CustomSocialButton({super.key, required this.image, required this.text, required this.onTap});
 
   @override
   Widget build(BuildContext context) {
@@ -17,21 +18,24 @@ class CustomSocialButton extends StatelessWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        Container(
-            width: width*.7,
-            height: width*.15,
-            decoration: BoxDecoration(
-              border: Border.all(color: AppColor.backgroundOfNavigationBarColor),
-              color: AppColor.textSecondaryColor,
-              borderRadius: BorderRadius.circular(50),
-            ),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-              children: [
-                SvgPicture.asset(image,width: 35,),
-                Center(child: SmallText(text: text,color: AppColor.textPrimaryColor,)),
-              ],
-            )
+        InkWell(
+          onTap: onTap,
+          child: Container(
+              width: width*.7,
+              height: width*.15,
+              decoration: BoxDecoration(
+                border: Border.all(color: AppColor.backgroundOfNavigationBarColor),
+                color: AppColor.textSecondaryColor,
+                borderRadius: BorderRadius.circular(50),
+              ),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  SvgPicture.asset(image,width: 35,),
+                  Center(child: SmallText(text: text,color: AppColor.textPrimaryColor,)),
+                ],
+              )
+          ),
         ),
       ],
     );
